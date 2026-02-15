@@ -1,0 +1,30 @@
+Single Source Shortest Distance
+1. Breadth First Search = Time Complexity - O(V+E)
+2. Dijkstra = Time Complexity - O(E*logV)
+3. Bellman Ford = Time Complexity - O(V*E)
+
+All Pair Shortest Distance
+1. Floyd Warshall =  Time Complexity - O(V^3)
+
+Limitations of BFS:
+
+1. BFS works correctly only for unweighted graphs (or graphs where every edge has the same weight, e.g., weight = 1).
+2. It cannot handle weighted graphs with varying edge costs, because BFS assumes all edges have equal "distance".
+
+Limitations of Dijkstra’s Algorithm:
+
+1. Dijkstra’s algorithm does not work with negative edge weights.
+2. If the graph contains a negative weight cycle, Dijkstra will fail or give incorrect results because 
+it assumes once a node’s shortest distance is found, it never decreases.
+
+Limitations of Bellman-Ford Algorithm:
+
+1. Bellman-Ford is designed for single-source shortest path problems.
+2. It is slower compared to Dijkstra (O(V·E)), so it is inefficient for large graphs.
+3. Although it can detect negative weight cycles, it cannot compute valid shortest paths if such cycles exist.
+
+Limitations of Floyd–Warshall Algorithm:
+
+1. It has high time complexity (O(V³)), so it is impractical for very large graphs.
+2. Works only on directed/undirected weighted graphs without negative weight cycles.
+3. It’s an all-pairs shortest path algorithm, so it’s overkill if you only need single-source shortest paths.
