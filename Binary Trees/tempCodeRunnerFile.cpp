@@ -1,1 +1,0 @@
-ont->left = myLeft;
